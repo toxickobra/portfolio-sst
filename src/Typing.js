@@ -37,8 +37,10 @@ function Typing({ texts = [], typingSpeed = 100, deletingSpeed = 50 }) {
     }, [displayedText, isDeleting, currentIndex, texts, typingSpeed, deletingSpeed]);
 
     return (
-        <div className="typing-effect">
-            <span>{displayedText}</span>
+        <div className="typing-container">
+            <div className="typing-effect">
+                <span>{displayedText}</span>
+            </div>
         </div>
     );
 }

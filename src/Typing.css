@@ -1,0 +1,24 @@
+.typing-effect {
+    font-family: 'Courier New', Courier, monospace; /* Use a monospace font for a typewriter effect */
+    font-size: 1.5rem; /* Adjust the font size as needed */
+    color: red; /* Change the text color to red */
+    border-right: 2px solid yellow; /* Create a vertical border to simulate a cursor */
+    padding-right: 5px; /* Add some padding to the right of the text */
+    margin-right: 5px; /* Add some margin to the right of the text */
+    display: inline-block; /* Ensure the container only takes the space it needs */
+}
+
+/* Blinking cursor animation */
+@keyframes blink {
+    0% { border-color: transparent; }
+    50% { border-color: red; } /* Change the cursor color to red */
+    100% { border-color: transparent; }
+}
+
+.cursor {
+    display: inline-block;
+    width: 2px; /* Adjust the width of the cursor */
+    height: 1.2em; /* Match the height of the text */
+    background-color: red; /* Color of the cursor (changed to red) */
+    animation: blink 0.8s step-end infinite; /* Apply the blinking animation */
+}

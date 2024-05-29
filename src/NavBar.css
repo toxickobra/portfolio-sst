@@ -1,0 +1,69 @@
+/* Basic styles for the navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 1rem;
+    background: rgb(2,0,36); /* Fallback for older browsers */
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+
+}
+
+/* Styles for the logo */
+.navbar-logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Styles for the navigation links */
+.navbar-links {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styles for individual links */
+.navbar-links li {
+    display: inline;
+}
+
+/* Styles for anchor tags */
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    position: relative;
+}
+
+/* Styles for the underline effect using pseudo-elements */
+.navbar-links a::before,
+.navbar-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: white;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.navbar-links a::before {
+    left: 50%;
+}
+
+.navbar-links a::after {
+    right: 50%;
+}
+
+/* Hover effect */
+.navbar-links a:hover::before,
+.navbar-links a:hover::after {
+    width: 100%;
+    left: 0;
+    right: 0;
+}
